@@ -50,3 +50,18 @@ Create a new MySQL database:
 Download Addendum (annotations support for PHP) from http://code.google.com/p/addendum/downloads/list and extract it to <path to bootstrap-zf-example>/library.
 Addendum is *not* shipped with this examples.
 
+Edit application/config/application.ini so that the MySQL settings are correct.
+
+
+Database migrations
+===================
+The script data/update_sql_base.sh dumps the schema (tables, views and rows) from your development environment into the create-tables.sql, create-views.sql and fixture.sql.
+
+If you have done a direct migration in your development database, let's say you added a new column, just run ./update_sql_base.sh and your unit test environment will be updated to the new schema.
+
+Unit tests
+==========
+Change to /tests and execute
+	phpunit
+PHPUnit must be installed.
+
