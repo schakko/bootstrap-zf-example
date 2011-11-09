@@ -1,0 +1,13 @@
+<div class="container">
+	<h1>Welcome</h1>
+	<?php if ($this->isAllowed(new Application_Model_Comment(), 'create')) { 
+		echo "<a href='" . $this->url(array('controller' => 'comment', 'action' => 'create')) . "'>Create a brand new comment</a>";
+	}
+	?>
+	<h2>All comments</h2>
+	<?php if ($this->comments && sizeof($this->comments) > 0): ?>
+	<?php echo $this->partial('comment/list.phtml', array('comments' => $this->comments)) ?>
+	<?php else: ?>
+	No comments available :-(
+	<?php endif; ?>
+</div>

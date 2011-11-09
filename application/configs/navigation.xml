@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configdata>
+	<nav>
+		<logout>
+			<label>Logout</label>
+			<route>logout</route>
+			<resource>mvc:user_logout</resource>
+			<privilege>navigation</privilege>
+		</logout>
+		<login>
+			<label>Login</label>
+			<route>login</route>
+			<resource>mvc:user_login</resource>
+			<privilege>navigation</privilege>
+		</login>
+	</nav>
+</configdata>

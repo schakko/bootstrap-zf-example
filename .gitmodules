@@ -1,0 +1,9 @@
+[submodule "library/bootstrap-zf"]
+	path = library/bootstrap-zf
+	url = git@github.com:schakko/bootstrap-zf.git
+[submodule "public/twitter-bootstrap"]
+	path = public/twitter-bootstrap
+	url = git@github.com:twitter/bootstrap.git
+[submodule "public/composite-eventbus"]
+	path = public/composite-eventbus
+	url = git@github.com:schakko/composite-eventbus.git

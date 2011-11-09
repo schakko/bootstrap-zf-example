@@ -1,0 +1,49 @@
+<?php echo $this->doctype(); ?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script type="text/javascript"
+	src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+<?php 
+$this->headLink()->appendStylesheet('/twitter-bootstrap/bootstrap.min.css');
+
+// $this->headScript()->appendFile('/scripts/jquery.tmpl.min.js');
+// include twitter-bootstrap
+$this->headScript()->appendFile('/twitter-bootstrap/js/bootstrap-tabs.js');
+$this->headScript()->appendFile('/twitter-bootstrap/js/bootstrap-alerts.js');
+// include composite-eventbus
+$this->headScript()->appendFile('/composite-eventbus/composite-eventbus.js');
+
+// include own scripts
+$this->headScript()->appendFile('/exampleapp/frontend-utils.js');
+// include javascript application controller
+$this->headScript()->appendFile('/exampleapp/application.js');
+echo $this->headLink();
+echo $this->headScript();
+?>
+</head>
+<body>
+	<div id="templates" style="display: hidden"></div>
+	<div class="topbar">
+		<div class="topbar-inner">
+			<div class="container">
+				<h3>
+					<a href="/">bootstrap-zf-example</a>
+				</h3>
+				<?php echo $this->navigation()->menu()->setUlClass('nav')->setMaxDepth('0')->render()?>
+				<?php if (!$this->session['user']->isLoggedIn()) {
+					echo $this->render('menu.phtml');
+				}?>
+			</div>
+		</div>
+	</div>
+	<header class="jumbotron masthead">
+		<div class="inner">
+			<div class="container">
+				<h1>&nbsp;</h1>
+			</div>
+		</div>
+	</header>
+	<div id="msgContainer"></div>
+	<?= $this->layout()->content; ?>
+</body>
+</html>

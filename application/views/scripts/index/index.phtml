@@ -1,0 +1,23 @@
+<div class="container">
+	<section id="welcome">
+		<div class="page-header">
+			<h1>prophetr</h1>
+			<small>past, present, future</small>
+		</div>
+		<div class="row show-grid">
+			<div class="span5">No account? Join now!</div>
+			<div class="span11">
+				<h1>Welcome</h1>
+				prophetr is a crowd application for making prophecies
+				<div id="timeline"></div>
+			</div>
+		</div>
+	</section>
+</div>
+<script type="text/javascript">
+(function() {
+var mvc = new MainSiteController();
+mvc.urlTimeline = '/timeline/public';		
+return mvc;
+})().init();
+</script>

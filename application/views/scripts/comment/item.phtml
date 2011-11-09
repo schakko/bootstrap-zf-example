@@ -1,0 +1,6 @@
+<li id="<?= $this->comment->id ?>" class="comment-item">
+	<strong>
+	<?= $this->username($this->comment->username) ?> wrote on <span class="date"><?= $this->comment->created_on ?></span>	:</strong>
+	<p><?= $this->comment->comment ?></p>
+	<?php if ($this->isAllowed($this->comment, 'delete')) { echo "<a href='" . $this->url(array('controller' => 'comment', 'action' => 'delete', 'id' => $this->comment->id)) . "'>Delete this comment</a>"; } ?>
+</li>

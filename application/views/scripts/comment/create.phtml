@@ -1,0 +1,31 @@
+<div class="container">
+	<h1>Create a new comment</h1>
+	<form action="<?= $this->url(array('controller' => 'comment', 'action' => 'create')); ?>"
+		method="post" id="formCommentCreate">
+		<div class="clearfix">
+			<label for="comment">Comment</label>
+			<div class="input">
+				<textarea class="xxlarge" name="comment"></textarea>
+				<span class="help-block">This is your comment... wooho!</span><br />
+			</div>
+		</div>
+		<div class="clearfix">
+			<label for="excerpt">Type</label>
+			<div class="input">
+				<select class="medium" name="comment_type">
+					<option value="0">Thumbs up</option>
+					<option value="1">Thumbs down</option>
+				</select>
+				<span class="help-block">Give your comment a thumb</span><br />
+ 			</div> 
+		</div>
+		<input type="button" class="btn submit" value="Comment" />
+	</form>
+</div>
+<script type="text/javascript">
+(function() {
+	// let's d some JavaScript logic (application.js)
+	var mvc = new CommentCreateViewController();
+	return mvc;
+})().init();
+</script>

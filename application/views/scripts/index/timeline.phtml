@@ -1,0 +1,16 @@
+<h2>Past</h2>
+<ul id="timelinePast">
+<?php foreach ($this->past as $entry) {
+	echo $this->partial('index/timeline_entry.phtml', array('entry' => $entry));	
+}
+?>
+</ul>
+<span id="serverDate"><?= $this->now ?></span>
+<h2>Future</h2>
+<ul id="timelineFuture">
+<?php foreach ($this->future as $entry) {
+	echo $this->partial('index/timeline_entry.phtml', array('entry' => $entry));	
+}
+?>
+</ul>
+</script>

@@ -1,0 +1,29 @@
+<div class="container">
+	<h1>Sign in</h1>
+	<form method="post" id="formLogin" action="<?= $this->url(array(), 'login')?>"
+		id="formLogin">
+		<input type="hidden" name="formName" value="formLogin" />
+		<div class="clearfix">
+			<label for="username">Username</label>
+			<div class="input">
+				<input class="xLarge" type="text" value="test" name="username"
+					placeholder="Username" />
+			</div>
+		</div>
+		<div class="clearfix">
+			<label for="pasword">Password</label>
+			<div class="input">
+				<input class="xLarge" type="password" value="test" name="password"
+					placeholder="Password" />
+			</div>
+		</div>
+		<input class="btn submit" type="button" value="Sign in" />
+	</form>
+</div>
+<script type="text/javascript">
+(function() {
+	// let's d some JavaScript logic (application.js)
+	var mvc = new LoginViewController();
+	return mvc;
+})().init();
+</script>

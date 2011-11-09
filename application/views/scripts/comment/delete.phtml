@@ -1,0 +1,15 @@
+<div class="container">
+		Do you really want to delete this comment?<br />
+		<button class="btn primary" id="deleteCommentCancel" href="<?= $this->urlBack ?>">Cancel</button>
+		<form method="post">
+			<input type="hidden" name="redirect" value="<?= $this->urlBack ?>" />
+			<button class="btn danger" id="deleteCommentDo">Delete it</button>
+		</form>
+</div>
+<script type="text/javascript">
+(function() {
+	// deletion of element
+	var mvc = new CommentDeleteViewController();
+	return mvc;
+})().init();
+</script>

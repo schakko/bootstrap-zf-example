@@ -1,0 +1,15 @@
+<script id="documentListItem" type="text/x-jquery-tmpl">
+	<h2>Past</h2>
+	<ul id="timelinePast">
+		{{each past}}
+		<li>${content_publish_on} <a href="/${username}/${hash}/document">${subject}</a></li>
+		{{/each}}
+	</ul>
+	<span id="serverDate">${now}</span>
+	<h2>Future</h2>
+	<ul id="timelineFuture">
+		{{each future}}
+		<li>${content_publish_on} <a href="/${username}/${hash}/document">${subject}</a></li>
+		{{/each}}
+	</ul>
+</script>

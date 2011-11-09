@@ -1,0 +1,19 @@
+<phpunit bootstrap="./Bootstrap.php" colors="true" stopOnFailure="true" stopOnError="true" processIsolation="false" verbose="true">
+    <testsuite name="ApplicationTestSuite">
+        <directory>./application/</directory>
+        <directory>./library/</directory>
+    </testsuite>
+    <filter>
+        <whitelist>
+            <directory suffix=".php">../application</directory>
+            <exclude>
+                <directory suffix=".phtml">../application/views</directory>
+                <file>../application/Bootstrap.php</file>
+            </exclude>
+        </whitelist>
+    </filter>
+    <logging>
+        <log type="coverage-html" target="./log/coverage" charset="UTF-8"
+             yui="true" highlight="false" lowUpperBound="35" highLowerBound="70"/>
+    </logging>
+</phpunit>

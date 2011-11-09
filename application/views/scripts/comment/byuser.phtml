@@ -1,0 +1,9 @@
+<div class="container">
+	<h1>These are the comments of <?= $this->username($this->username) ?></h1>
+	<?php if ($this->comments && sizeof($this->comments) > 0): ?>
+	<?php echo $this->partial('comment/list.phtml', array('comments' => $this->comments)) ?>
+	<?php else: ?>
+	No comments available :-(
+	<?php endif; ?>
+
+</div>

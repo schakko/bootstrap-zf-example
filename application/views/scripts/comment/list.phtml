@@ -1,0 +1,5 @@
+<ul>
+<?php foreach ($this->comments as $idx => $comment): ?>
+<?php echo $this->partial('comment/item.phtml', array('comment' => $comment)); ?>
+<?php endforeach; ?>
+</ul>
